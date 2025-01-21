@@ -10,15 +10,20 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- animate.css cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <!-- home page css link -->
     <link rel="stylesheet" href="home.css" />
     <title>Bootstrap demo</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-      <div class="container-md bg-dark">
+    <nav class="navbar navbar-expand-md sticky-top">
+      <div class="container-md">
         <a class="navbar-brand" href="#"
-          ><img src="images/logo-banner1.png" alt=""
+          ><img src="images/logo-banner.png" alt=""
         /></a>
         <button
           class="navbar-toggler"
@@ -31,18 +36,18 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="offcanvas offcanvas-end text-bg-dark"
+          class="offcanvas offcanvas-end"
           tabindex="-1"
           id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel"
         >
           <div class="offcanvas-header">
             <a class="navbar-brand" href="#"
-              ><img src="images/logo-banner1.png" alt=""
+              ><img src="images/logo-banner.png" alt=""
             /></a>
             <button
               type="button"
-              class="btn-close btn-close-white"
+              class="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
@@ -50,12 +55,14 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item me-3">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active ms-3" aria-current="page" href="#"
+                  >Home</a
+                >
               </li>
 
               <div class="dropdown">
                 <button
-                  class="btn dropdown-toggle me-3 btn-dark border-sm"
+                  class="btn dropdown-toggle me-3 border-sm"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -66,7 +73,7 @@
                   Courses
                 </button>
                 <ul
-                  class="dropdown-menu dropdown-menu-dark"
+                  class="dropdown-menu"
                   onmouseover="displayDropdown(this)"
                   onmouseleave="hideDropdown(this)"
                   onfocus="displayDropdownOnClick(this)"
@@ -76,9 +83,9 @@
                   <li><a class="dropdown-item" href="#">Action three</a></li>
                 </ul>
               </div>
-              <div class="dropdown-center">
+              <div class="dropdown">
                 <button
-                  class="btn dropdown-toggle me-3 btn-dark border-sm"
+                  class="btn dropdown-toggle me-3 border-sm"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -89,7 +96,7 @@
                   Pages
                 </button>
                 <ul
-                  class="dropdown-menu dropdown-menu-dark"
+                  class="dropdown-menu"
                   onmouseover="displayDropdown(this)"
                   onmouseleave="hideDropdown(this)"
                   onfocus="displayDropdownOnClick(this)"
@@ -99,9 +106,9 @@
                   <li><a class="dropdown-item" href="#">Action three</a></li>
                 </ul>
               </div>
-              <div class="dropdown-center">
+              <div class="dropdown">
                 <button
-                  class="btn dropdown-toggle me-3 btn-dark border-1"
+                  class="btn dropdown-toggle me-3 border-1"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -112,7 +119,7 @@
                   Blog
                 </button>
                 <ul
-                  class="dropdown-menu dropdown-menu-dark"
+                  class="dropdown-menu"
                   onmouseover="displayDropdown(this)"
                   onmouseleave="hideDropdown(this)"
                   onfocus="displayDropdownOnClick(this)"
@@ -122,35 +129,49 @@
                   <li><a class="dropdown-item" href="#">Action three</a></li>
                 </ul>
               </div>
+              <li class="nav-item me-1 d-grid gap-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-success"
+                  id="login-btn"
+                >
+                  Login
+                </button>
+              </li>
+              <li class="nav-item me-1 d-grid gap-2">
+                <button type="button" class="btn btn-success" id="signup-btn">
+                  Sign up
+                </button>
+              </li>
             </ul>
-            <!-- <form class="d-flex" role="search" id="search-container">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-success" type="submit">Search</button>
-              </form> -->
           </div>
         </div>
       </div>
     </nav>
     <div id="main-container">
-      <section id="hero">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h1 class="display-4">Learn to code</h1>
-              <p class="lead">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                quod, voluptates, quae, quibusdam dolorum quia quos
-                exercitationem, doloremque quidem voluptatum.
+      <section class="container-fluid" id="hero-section">
+        <div class="container-md" id="content-container">
+          <div class="centered-content">
+            <div class="texts">
+              <h1 class="animate__animated animate__zoomIn">
+                Education With Greater Convenience
+              </h1>
+              <p class="animate__animated animate__fadeInUp">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                deserunt.
               </p>
-              <a href="#" class="btn btn-primary">Get started</a>
             </div>
-            <div class="col-md-6">
-              <img src="images/hero.png" alt="" class="img-fluid" />
+            <div class="buttons-container">
+              <button
+                class="btn btn-danger col-6 col-md-4 mx-auto animate__animated animate__fadeInUp start-trial"
+              >
+                Start Free Trial
+              </button>
+              <button
+                class="btn btn-outline-light col-6 col-md-4 mx-auto animate__animated animate__fadeInUp browse-courses"
+              >
+                Browse Courses
+              </button>
             </div>
           </div>
         </div>
