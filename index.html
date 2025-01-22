@@ -15,6 +15,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- font awesome 4 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- home page css link -->
     <link rel="stylesheet" href="home.css" />
     <title>E-Learning Site</title>
@@ -149,7 +157,7 @@
       </div>
     </nav>
     <div id="main-container">
-      <section class="container-fluid" id="hero-section">
+      <section id="hero-section">
         <div class="container-md" id="content-container">
           <div class="centered-content">
             <div class="texts">
@@ -172,6 +180,109 @@
               >
                 Browse Courses
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="search">
+        <div class="search-bar-container container-md">
+          <input
+            type="search"
+            name=""
+            id="search-bar"
+            placeholder="What Do You Want To Learn Today?"
+          /><button class="search-icon-container">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="popular-courses">
+        <div class="container-md">
+          <div class="header">
+            <div class="texts">
+              <h1>Popular Courses</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur, consequuntur!
+              </p>
+            </div>
+            <button class="browse-all-courses">
+              <a href=""
+                >Browse All Courses<i class="fa fa-angle-double-right"></i
+              ></a>
+            </button>
+          </div>
+          <div class="course-card-container">
+            <!-- the cards below are all bootstrap template codes(slightly editted of course) -->
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/database-management-image1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">DataBase Management Course</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary course-card-btn"
+                  >Go somewhere</a
+                >
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/Info-security.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Information Security Course</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary course-card-btn"
+                  >Go somewhere</a
+                >
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/Learn-Web-Development.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Design & Development Course</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary course-card-btn"
+                  >Go somewhere</a
+                >
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/database-management-image1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">DataBase Management Course</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary course-card-btn"
+                  >Go somewhere</a
+                >
+              </div>
             </div>
           </div>
         </div>

@@ -26,12 +26,12 @@ a.navbar-brand {
 
 /* =======Container for every other section below the nav============= */
 #main-container {
-  height: 100%;
+  height: fit-content;
   padding: 0;
+  overflow: hidden;
 }
 
 section#hero-section {
-  border: 1px solid green;
   height: 88vh;
   background-image: linear-gradient(#3b3333a4, #3b3333a4),
     url(images/pexels-element5-1370295.jpg);
@@ -78,11 +78,119 @@ button.start-trial:hover {
 button.browse-courses:hover {
   background-color: #dc3545;
   border: 1px solid #dc3545;
+  color: white;
 }
 
 div.buttons-container button {
   padding: 1rem;
 }
+
+/* ======search bar section design ====================== */
+section#search {
+  background-color: #dd3333;
+  padding: 2rem 0px;
+}
+
+div.search-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
+#search-bar {
+  padding: 1rem;
+  width: 50%;
+  outline: 0px;
+  border: 0px;
+  border-radius: 0.5rem 0px 0px 0.5rem;
+}
+
+#search-bar::placeholder {
+  font-weight: 500;
+}
+
+button.search-icon-container {
+  background-color: black;
+  color: white;
+  padding: 0px 1.5rem;
+  color: white;
+  border: 0px;
+  border-radius: 0px 0.5rem 0.5rem 0px;
+}
+
+button.search-icon-container i {
+  display: block;
+}
+
+/* =========popular courses section =========== */
+
+section.popular-courses {
+  padding: 3rem 0px;
+}
+
+section.popular-courses div.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0px;
+}
+
+div.header button.browse-all-courses {
+  display: block;
+  border: 0px;
+  align-items: center;
+  background-color: #fff;
+}
+
+button.browse-all-courses a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  color: #778ab9;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+button.browse-all-courses a:hover {
+  color: #dc3545;
+}
+
+button.browse-all-courses a * {
+  display: inline-block;
+}
+
+button.browse-all-courses::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.04rem;
+  background-color: #778ab9;
+  transition: background-color 0.3s;
+}
+
+button.browse-all-courses:hover::after {
+  background-color: #dc3545;
+}
+
+div.course-card-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+div.course-card-container > * {
+  min-width: 200px;
+  flex: 1;
+}
+
+div.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========mobile styling============ */
 
 @media (max-width: 767px) {
   .navbar-brand img {
@@ -96,17 +204,36 @@ div.buttons-container button {
   }
 
   /* ======adding margin to the bottom of the course,pages and blog button.======= */
+
   div.offcanvas div.dropdown,
   div.offcanvas li.nav-item {
     margin-bottom: 1rem;
   }
 
-  div.centered-content {
-    margin-top: 50%;
-    align-self: flex-start;
-  }
-
   div.buttons-container button {
     padding: 0.5rem;
+  }
+
+  /* search bar section============= */
+  #search-bar {
+    width: 100%;
+  }
+
+  /* popular courses section============= */
+
+  section.popular-courses div.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* responsive design for the cards in the "popular courses section===" */
+@media (min-width: 694px) and (max-width: 991px) {
+  div.course-card-container {
+    justify-content: center;
+  }
+  div.course-card-container > * {
+    flex: 0 0 45%;
   }
 }
