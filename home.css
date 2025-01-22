@@ -52,11 +52,13 @@ div.centered-content {
 }
 
 div.centered-content div.texts h1 {
-  font-weight: 900;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 div.centered-content div.texts p {
   font-weight: 400;
+  font-size: 1.2rem;
   color: #c1c8c8;
 }
 
@@ -208,6 +210,16 @@ div.card img {
   div.offcanvas div.dropdown,
   div.offcanvas li.nav-item {
     margin-bottom: 1rem;
+  }
+
+  /* centered text styling for the hero section============ */
+
+  div.centered-content div.texts h1 {
+    font-size: 2.5rem;
+  }
+  
+  div.centered-content div.texts p {
+    font-size: 1.2rem;
   }
 
   div.buttons-container button {
