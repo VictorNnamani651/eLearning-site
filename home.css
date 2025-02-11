@@ -174,21 +174,9 @@ button.browse-all-courses:hover::after {
   background-color: #dc3545;
 }
 
-div.course-card-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-div.course-card-container > * {
-  min-width: 200px;
-  flex: 1;
-}
-
-div.course-card:hover{
+div.course-card:hover {
   box-shadow: 0.3rem 0.3rem 0.4rem 0.1rem #0000003b;
-}
+} 
 
 div.card img {
   width: 100%;
@@ -221,7 +209,7 @@ div.card img {
   div.centered-content div.texts h1 {
     font-size: 2.5rem;
   }
-  
+
   div.centered-content div.texts p {
     font-size: 1.2rem;
   }
@@ -241,15 +229,5 @@ div.card img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-}
-
-/* responsive design for the cards in the "popular courses section===" */
-@media (min-width: 694px) and (max-width: 991px) {
-  div.course-card-container {
-    justify-content: center;
-  }
-  div.course-card-container > * {
-    flex: 0 0 45%;
   }
 }

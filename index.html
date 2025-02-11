@@ -28,6 +28,7 @@
     <title>E-Learning Site</title>
   </head>
   <body>
+    <!-- =========NAV BAR ==================================================================================================== -->
     <nav class="navbar navbar-expand-md sticky-top">
       <div class="container-md">
         <a class="navbar-brand" href="#"
@@ -156,6 +157,7 @@
         </div>
       </div>
     </nav>
+    <!-- HERO SECTION (BODY)====================================================================================================== -->
     <div id="main-container">
       <section id="hero-section">
         <div class="container-md" id="content-container">
@@ -184,7 +186,7 @@
           </div>
         </div>
       </section>
-
+      <!-- SEARCH BAR============================================================================================================== -->
       <section id="search">
         <div class="search-bar-container container-md">
           <input
@@ -197,7 +199,7 @@
           </button>
         </div>
       </section>
-
+      <!-- POPULAR COURSES SECTION ==================================================================-==================== -->
       <section class="popular-courses">
         <div class="container-md">
           <div class="header">
@@ -214,95 +216,220 @@
               ></a>
             </button>
           </div>
+          <!-- COURSE CARD CONTAINER=========================================== -->
           <div class="course-card-container">
-            <!-- the cards below are all bootstrap template codes(slightly editted of course) -->
+            <!-- FOR LARGER SCREENS========================================================= -->
             <div
-              class="card course-card"
-              style="width: 18rem"
-              onmouseover="make_Course_Btn_Fully_Red(this)"
-              onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              class="row d-none d-md-flex gap-2"
+              id="course-view-for-lg-screens"
             >
-              <img
-                src="images/database-management-image1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">DataBase Management Course</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-outline-danger course-card-btn"
-                  >Go somewhere</a
-                >
+              <div
+                class="card course-card col p-0"
+                onmouseover="make_Course_Btn_Fully_Red(this)"
+                onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              >
+                <img
+                  src="images/database-management-image1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">DataBase Management Course</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-outline-danger course-card-btn"
+                    >Go somewhere</a
+                  >
+                </div>
+              </div>
+              <div
+                class="card course-card col p-0"
+                onmouseover="make_Course_Btn_Fully_Red(this)"
+                onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              >
+                <img
+                  src="images/Info-security.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Information Security Course</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-outline-danger course-card-btn"
+                    >Go somewhere</a
+                  >
+                </div>
+              </div>
+              <div
+                class="card course-card col p-0"
+                onmouseover="make_Course_Btn_Fully_Red(this)"
+                onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              >
+                <img
+                  src="images/Learn-Web-Development.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Web Design & Development Course</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-outline-danger course-card-btn"
+                    >Go somewhere</a
+                  >
+                </div>
+              </div>
+              <div
+                class="card course-card col p-0"
+                onmouseover="make_Course_Btn_Fully_Red(this)"
+                onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              >
+                <img
+                  src="images/database-management-image1.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">DataBase Management Course</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-outline-danger course-card-btn"
+                    >Go somewhere</a
+                  >
+                </div>
               </div>
             </div>
+            <!-- POPULAR COURSES CARDS CAROUSEL FOR MOBILE VIEW========================================================================================== -->
             <div
-              class="card course-card"
-              style="width: 18rem"
-              onmouseover="make_Course_Btn_Fully_Red(this)"
-              onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide d-md-none"
             >
-              <img
-                src="images/Info-security.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Information Security Course</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-outline-danger course-card-btn"
-                  >Go somewhere</a
-                >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
               </div>
-            </div>
-            <div
-              class="card course-card"
-              style="width: 18rem"
-              onmouseover="make_Course_Btn_Fully_Red(this)"
-              onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
-            >
-              <img
-                src="images/Learn-Web-Development.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Web Design & Development Course</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-outline-danger course-card-btn"
-                  >Go somewhere</a
-                >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div
+                    class="card course-card d-block w-100"
+                    onmouseover="make_Course_Btn_Fully_Red(this)"
+                    onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+                  >
+                    <img
+                      src="images/database-management-image1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">DataBase Management Course</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-outline-danger course-card-btn"
+                        >Go somewhere</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div
+                    class="card course-card d-block w-100"
+                    onmouseover="make_Course_Btn_Fully_Red(this)"
+                    onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+                  >
+                    <img
+                      src="images/database-management-image1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">DataBase Management Course</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-outline-danger course-card-btn"
+                        >Go somewhere</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card course-card d-block w-100"
+                    onmouseover="make_Course_Btn_Fully_Red(this)"
+                    onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
+                  >
+                    <img
+                      src="images/database-management-image1.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">DataBase Management Course</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-outline-danger course-card-btn"
+                        >Go somewhere</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div
-              class="card course-card"
-              style="width: 18rem"
-              onmouseover="make_Course_Btn_Fully_Red(this)"
-              onmouseleave="make_Course_Btn_Have_Only_a_Red_Outline(this)"
-            >
-              <img
-                src="images/database-management-image1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">DataBase Management Course</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-outline-danger course-card-btn"
-                  >Go somewhere</a
-                >
-              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
