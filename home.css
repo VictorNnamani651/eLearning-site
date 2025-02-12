@@ -176,14 +176,13 @@ button.browse-all-courses:hover::after {
 
 div.course-card:hover {
   box-shadow: 0.3rem 0.3rem 0.4rem 0.1rem #0000003b;
-} 
+}
 
 div.card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 /* ===========mobile styling============ */
 
 @media (max-width: 767px) {
