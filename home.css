@@ -183,6 +183,20 @@ div.card img {
   height: 100%;
   object-fit: cover;
 }
+
+/* sub banner section====================== */
+#sub-banner {
+  background-color: #dd3333;
+  color: white;
+}
+
+.sub-banner-card > div {
+  background-color: #fff;
+  color: #dd3333;
+  font-size: 3rem;
+}
+
+
 /* ===========mobile styling============ */
 
 @media (max-width: 767px) {
