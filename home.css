@@ -313,6 +313,64 @@ div.footer-gallery-imgs img {
   height: 100%;
   object-fit: fill;
 }
+/* contact section ====================== */
+.contact div.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .contact div.centered-content > * {
+  border: 1px solid red;
+} */
+
+div.contact {
+  min-height: 80vh;
+  background-image: linear-gradient(#6b6161a4, #6b6161a4),
+    url(images/pexels-pixabay-41949.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url(images/pexels-pixabay-41949.jpg); */
+}
+
+div.contact div.centered-content input[type="text"] {
+  background-color: #ffffff50;
+  border: 0px;
+  color: white;
+  font-style: italic;
+}
+
+.contact input::placeholder {
+  color: #5a5757;
+  font-style: italic;
+  opacity: 1;
+}
+
+.contact-search-bar-container {
+  width: 70%;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #cccecf;
+  border: 1px solid #cccecf;
+  border-radius: 50%;
+  padding: 0.5em 0.6em;
+  margin: 0px 0.6em;
+  transition: all 300ms ease-in-out;
+}
+
+.social-media a:hover {
+  color: white;
+  background-color: #dd3333;
+}
+
+/* .contact .contact-input-bar{
+  background-color: #dd3333;
+} */
 
 /* ===========mobile styling============ */
 
