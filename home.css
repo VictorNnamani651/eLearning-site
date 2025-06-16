@@ -69,22 +69,23 @@ div.buttons-container {
   flex-direction: column;
 }
 
-button.start-trial {
+.start-trial-btn {
   margin-bottom: 1rem;
 }
 
-button.start-trial:hover {
+.start-trial-btn:hover {
   background-color: grey;
   border: 1px solid grey;
 }
 
-button.browse-courses:hover {
+.browse-courses-btn:hover {
   background-color: #dc3545;
   border: 1px solid #dc3545;
   color: white;
 }
 
-div.buttons-container button {
+.start-trial-btn,
+.browse-courses-btn {
   padding: 1rem;
 }
 
@@ -94,7 +95,7 @@ section#search {
   padding: 2rem 0px;
 }
 
-div.search-bar-container {
+.search-bar-container {
   display: flex;
   justify-content: center;
 }
@@ -120,7 +121,7 @@ button.search-icon-container {
   border-radius: 0px 0.5rem 0.5rem 0px;
 }
 
-button.search-icon-container i {
+i.search-icon {
   display: block;
 }
 
