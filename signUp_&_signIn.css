@@ -26,11 +26,11 @@
 .btn-signUp:hover {
   background-color: #bb2a2a;
 }
-.login-link {
+.signIn-link {
   color: #dd3333;
   text-decoration: none;
 }
-.login-link:hover {
+.signIn-link:hover {
   text-decoration: underline;
 }
 
