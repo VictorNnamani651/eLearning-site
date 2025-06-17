@@ -36,7 +36,7 @@
     <!-- =========NAV BAR ==================================================================================================== -->
     <nav class="navbar navbar-expand-md sticky-top">
       <div class="container-md">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.html"
           ><img src="images/logo-banner.png" alt=""
         /></a>
         <button
@@ -69,7 +69,10 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item me-3">
-                <a class="nav-link active ms-3" aria-current="page" href="#"
+                <a
+                  class="nav-link active ms-3"
+                  aria-current="page"
+                  href="index.html"
                   >Home</a
                 >
               </li>
@@ -149,7 +152,7 @@
                   class="btn btn-outline-success"
                   id="login-btn"
                 >
-                  Login
+                  Sign In
                 </a>
               </li>
               <li class="nav-item me-1 d-grid gap-2">
@@ -164,6 +167,7 @@
         </div>
       </div>
     </nav>
+
     <!-- HERO SECTION (BODY)====================================================================================================== -->
     <div id="main-container">
       <section id="hero-section">
@@ -810,7 +814,7 @@
     </div>
 
     <!-- Modal alerting that this project is not yet complete  -->
-    <!-- <div
+    <div
       class="modal fade"
       id="incompleteProjectModal"
       tabindex="-1"
@@ -845,13 +849,14 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
     <!-- cha..pt code for testimonials carousel ============ -->
     <script>
       const carousel = document.getElementById("carousel");
@@ -873,6 +878,7 @@
 
       setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
     </script>
+
     <!-- inline js code to add lazy loading to every image -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -882,14 +888,15 @@
         });
       });
     </script>
+
     <!-- Auto-show script for the modal ("the project is not yet complete") -->
-    <!-- <script>
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         var myModal = new bootstrap.Modal(
           document.getElementById("incompleteProjectModal")
         );
         myModal.show();
       });
-    </script> -->
+    </script>
   </body>
 </html>
