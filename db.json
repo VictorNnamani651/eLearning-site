@@ -1,0 +1,8 @@
+{
+  "courses": [
+    { "id": 1, "title": "Intro to HTML", "instructor": "Victor" }
+  ],
+  "users": [
+    { "id": 1, "username": "student1", "email": "student1@mail.com" }
+  ]
+}
