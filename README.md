@@ -1,1 +1,2 @@
 # eLearning-site
+This is a fully responsive e-learning website built with HTML, CSS, and JavaScript, inspired by a premium UI design from ThemeForest. While the UI design served as a reference, every component has been recreated from scratch to improve my understanding of frontend development and layout structuring.
