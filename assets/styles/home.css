@@ -35,7 +35,7 @@ a.navbar-brand {
 section#hero-section {
   height: 88vh;
   background-image: linear-gradient(#3b3333a4, #3b3333a4),
-    url(images/pexels-element5-1370295.webp);
+    url(/assets/images/pexels-element5-1370295.webp);
   background-size: cover;
   background-position: center;
 }
@@ -329,12 +329,12 @@ div.footer-gallery-imgs img {
 div.contact {
   min-height: 80vh;
   background-image: linear-gradient(#6b6161a4, #6b6161a4),
-    url(images/pexels-pixabay-41949.webp);
+    url(/assets/images/pexels-pixabay-41949.webp);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-image: url(images/pexels-pixabay-41949.jpg); */
+  /* background-image: url(/assets/images/pexels-pixabay-41949.jpg); */
 }
 
 div.contact div.centered-content input[type="text"] {

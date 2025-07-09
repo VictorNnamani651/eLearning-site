@@ -29,16 +29,16 @@
       referrerpolicy="no-referrer"
     />
     <!-- home page css link(this link also contains general styles for other pages) -->
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="assets/styles/home.css" />
     <!-- signup/signIn css link -->
-    <link rel="stylesheet" href="signUp_&_signIn.css" />
+    <link rel="stylesheet" href="assets/styles/signUp_&_signIn.css" />
     <title>E-Learning Site</title>
   </head>
   <body>
-    <!-- =========NAV BAR =========================================================================================== -->
+    <!-- =========NAV BAR ==================================================================================================== -->
     <nav class="navbar navbar-expand-md sticky-top shadow">
       <div class="container-md">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.html"
           ><img src="images/logo-banner.png" alt=""
         /></a>
         <button
@@ -71,7 +71,10 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item me-3">
-                <a class="nav-link active ms-3" aria-current="page" href="#"
+                <a
+                  class="nav-link active ms-3"
+                  aria-current="page"
+                  href="index.html"
                   >Home</a
                 >
               </li>
@@ -167,47 +170,55 @@
       </div>
     </nav>
 
-    <!-- ===== SignIn Section  ================================================================================== -->
-    <section id="signIn">
-      <div class="signIn-container text-center">
-        <h2 class="signIn-title mb-4">Sign In</h2>
+    <!-- ===== Sign Up Section ============================================================================================ -->
+    <section id="signUp">
+      <div class="signUp-container text-center">
+        <h2 class="signUp-title mb-4">Sign Up</h2>
         <form>
-          <div class="mb-3 text-start">
+          <div class="mb-3">
             <input
               type="text"
               class="form-control"
-              placeholder="Username or email *"
+              placeholder="Username"
               required
             />
           </div>
-          <div class="mb-3 text-start">
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="mb-3">
             <input
               type="password"
               class="form-control"
-              placeholder="Password *"
+              placeholder="Password"
               required
             />
           </div>
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="rememberMe" />
-              <label class="form-check-label" for="rememberMe"
-                >Remember Me</label
-              >
-            </div>
-            <a href="#" class="link-red">Lost your password?</a>
+          <div class="mb-4">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Repeat Password"
+              required
+            />
           </div>
           <div class="d-grid mb-3">
-            <button type="submit" class="btn btn-signIn">SIGN IN</button>
+            <button type="submit" class="btn btn-signUp">SIGN UP</button>
           </div>
         </form>
         <p class="mt-3">
-          Not a member yet? <a href="signUp.html" class="link-red">Sign Up</a>
+          Are you a member?
+          <a href="signIn.html" class="signIn-link">Sign in</a>
         </p>
       </div>
     </section>
 
-    <!-- footer section=========================================================================================== -->
+    <!-- footer section -->
     <section class="py-5 border-5 border-top border-danger" id="footer">
       <div class="container-md">
         <div class="py-5 row">
@@ -233,7 +244,7 @@
               <li><a href="">Courses</a></li>
               <li><a href="">LP Checkout</a></li>
               <li><a href="">LP Profile</a></li>
-              <li><a href="">Register</a></li>
+              <li><a href="">signUp</a></li>
               <li><a href="">Membership</a></li>
             </ul>
           </div>
@@ -294,8 +305,7 @@
         </div>
       </div>
     </section>
-
-    <!-- news letter section========================================================================================== -->
+    <!-- news letter section -->
     <div class="contact d-flex justify-content-center align-items-center">
       <div class="centered-content">
         <h1>Subscribe to our news letter</h1>
