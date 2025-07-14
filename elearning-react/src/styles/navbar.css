@@ -1,0 +1,36 @@
+/* ===========Nav Bar============= */
+nav {
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===========mobile styling============ */
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    margin: 0;
+  }
+
+  /* ==============side bar header(containing the logo and close btn)========== */
+  .offcanvas-header {
+    border-bottom: 1px solid #0080005e;
+    padding: 0.5rem 1rem;
+  }
+
+  /* ======adding margin to the bottom of the course,pages and blog button.======= */
+
+  div.offcanvas div.dropdown,
+  div.offcanvas li.nav-item {
+    margin-bottom: 1rem;
+  }
+}

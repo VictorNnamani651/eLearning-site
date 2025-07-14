@@ -15,7 +15,7 @@ nav {
   background-color: #fff;
 }
 
-a.navbar-brand {
+.navbar-brand {
   padding: 0;
 }
 
@@ -35,7 +35,7 @@ a.navbar-brand {
 section#hero-section {
   height: 88vh;
   background-image: linear-gradient(#3b3333a4, #3b3333a4),
-    url(/assets/images/pexels-element5-1370295.webp);
+    url(../assets/images/pexels-element5-1370295.webp);
   background-size: cover;
   background-position: center;
 }
@@ -196,7 +196,7 @@ div.card img {
 
 /* sub banner section====================== */
 #sub-banner {
-  background-color: #dd3333;
+  background-color: green;
   color: white;
 }
 
