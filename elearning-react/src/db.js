@@ -127,3 +127,78 @@ export const footerGalleryData = [
     src: "https://elearningwp.thimpress.com/demo-04/wp-content/uploads/sites/10/2017/03/pexels-photo-159888-150x150.jpeg",
   },
 ];
+
+export const courseData = [
+  {
+    id: 5,
+    title: "Digital Marketing Fundamentals",
+    description:
+      "Learn the essentials of digital marketing, including SEO, social media, and content strategy.",
+    imageSrc:
+      "https://placehold.co/400x225/E0B3AA/000000?text=Digital+Marketing", // Orange-ish placeholder
+  },
+  {
+    id: 6,
+    title: "Introduction to Graphic Design",
+    description:
+      "Master the basics of visual communication and design tools like Adobe Photoshop and Illustrator.",
+    imageSrc: "https://placehold.co/400x225/CCBBE0/000000?text=Graphic+Design", // Purple-ish placeholder
+  },
+  {
+    id: 7,
+    title: "Cloud Computing Basics (AWS)",
+    description:
+      "An introductory course to cloud computing concepts and Amazon Web Services (AWS) fundamentals.",
+    imageSrc: "https://placehold.co/400x225/B3E0AA/000000?text=Cloud+Computing", // Green-ish placeholder
+  },
+  {
+    id: 8,
+    title: "Mobile App Development (Android)",
+    description:
+      "Develop your first Android applications using Java/Kotlin and the Android Studio IDE.",
+    imageSrc: "https://placehold.co/400x225/FFDDAA/000000?text=Mobile+App+Dev", // Yellow-ish placeholder
+  },
+  {
+    id: 9,
+    title: "Data Science with Python",
+    description:
+      "Explore the basics of data analysis, visualization, and machine learning using Python.",
+    imageSrc: "https://placehold.co/400x225/AACCEE/000000?text=Data+Science", // Light blue-ish placeholder
+  },
+  {
+    id: 10,
+    title: "Digital Marketing Fundamentals",
+    description:
+      "Learn the essentials of digital marketing, including SEO, social media, and content strategy.",
+    imageSrc:
+      "https://placehold.co/400x225/E0B3AA/000000?text=Digital+Marketing", // Orange-ish placeholder
+  },
+  {
+    id: 11,
+    title: "Introduction to Graphic Design",
+    description:
+      "Master the basics of visual communication and design tools like Adobe Photoshop and Illustrator.",
+    imageSrc: "https://placehold.co/400x225/CCBBE0/000000?text=Graphic+Design", // Purple-ish placeholder
+  },
+  {
+    id: 12,
+    title: "Cloud Computing Basics (AWS)",
+    description:
+      "An introductory course to cloud computing concepts and Amazon Web Services (AWS) fundamentals.",
+    imageSrc: "https://placehold.co/400x225/B3E0AA/000000?text=Cloud+Computing", // Green-ish placeholder
+  },
+  {
+    id: 13,
+    title: "Mobile App Development (Android)",
+    description:
+      "Develop your first Android applications using Java/Kotlin and the Android Studio IDE.",
+    imageSrc: "https://placehold.co/400x225/FFDDAA/000000?text=Mobile+App+Dev", // Yellow-ish placeholder
+  },
+  {
+    id: 14,
+    title: "Data Science with Python",
+    description:
+      "Explore the basics of data analysis, visualization, and machine learning using Python.",
+    imageSrc: "https://placehold.co/400x225/AACCEE/000000?text=Data+Science", // Light blue-ish placeholder
+  },
+];

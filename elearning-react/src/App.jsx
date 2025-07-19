@@ -1,6 +1,7 @@
 import LandingPage from "./pages/landingPage.jsx";
 import SignUpPage from "./pages/signUpPage.jsx";
 import SignInPage from "./pages/signInPage.jsx";
+import CoursePage from "./pages/coursePage.jsx";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -8,8 +9,10 @@ function App() {
     <div id="body">
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/SignUp" element={<SignUpPage />} />
-        <Route path="/SignIn" element={<SignInPage />} />
+        <Route path="/signUp" element={<SignUpPage />} />
+        <Route path="/signIn" element={<SignInPage />} />
+        <Route path="/signIn" element={<SignInPage />} />
+        <Route path="/coursePage" element={<CoursePage />} />
       </Routes>
     </div>
   );

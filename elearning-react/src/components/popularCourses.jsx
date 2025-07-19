@@ -15,7 +15,7 @@ const PopularCourses = () => {
             </p>
           </div>
           <button className="browse-all-courses">
-            <Link to="/">
+            <Link to="/coursePage">
               Browse All Courses<i className="fa fa-angle-double-right"></i>
             </Link>
           </button>
@@ -29,7 +29,7 @@ const PopularCourses = () => {
             id="course-view-for-lg-screens"
           >
             {popularCoursesData.map((course) => (
-              <CourseCard key={course.id} course={course} />
+              <CourseCard key={course.id} course={course} columnClass={"col"} />
             ))}
           </div>
 
@@ -64,7 +64,7 @@ const PopularCourses = () => {
                 >
                   {/* Note: I'm using a small optimization to reuse the CourseCard component here
                       by wrapping it in a carousel-specific div. */}
-                  <CourseCard course={course} />
+                  <CourseCard course={course} columnClass={"col"} />
                 </div>
               ))}
             </div>

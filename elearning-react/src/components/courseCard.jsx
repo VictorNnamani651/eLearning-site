@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course, columnClass }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // The original JS functions are replaced with React's event handlers and state
@@ -18,7 +18,7 @@ const CourseCard = ({ course }) => {
 
   return (
     <div
-      className="card course-card col p-0"
+      className={`card course-card ${columnClass} p-0`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
