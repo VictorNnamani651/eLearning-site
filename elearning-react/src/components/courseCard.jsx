@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
+import { useState } from "react";
 
 const CourseCard = ({ course, columnClass }) => {
+  // the code below is for hover effect
   const [isHovered, setIsHovered] = useState(false);
-
-  // The original JS functions are replaced with React's event handlers and state
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -12,25 +12,34 @@ const CourseCard = ({ course, columnClass }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
   // Conditionally apply the Bootstrap classes for the button based on hover state
   const buttonClass = isHovered ? "btn btn-danger" : "btn btn-outline-danger";
-
+  const shadowClass = isHovered ? "cardShadow" : "shadow-sm;";
   return (
-    <div
-      className={`card course-card ${columnClass} p-0`}
+    // h-100 ensures cards in a Row stretch to equal height
+    <Card
+      className={`h-100 ${shadowClass} ${columnClass}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={course.imageSrc} className="card-img-top" alt={course.title} />
-      <div className="card-body">
-        <h5 className="card-title">{course.title}</h5>
-        <p className="card-text">{course.description}</p>
+      {/* Card.Img for the image */}
+      <Card.Img variant="top" className="courseCardImg p-0" src={course.imageSrc} alt={course.title} />
+      {/* Card.Body for the content area */}
+      <Card.Body>
+        <Card.Title>{course.title}</Card.Title>{" "}
+        {/* Card.Title for the heading */}
+        <Card.Text className="text-muted">
+          {/* Card.Text for paragraph content */}
+          {course.description}
+        </Card.Text>
+      </Card.Body>
+      {/* Card.Footer for bottom content like buttons */}
+      <Card.Footer className="bg-white border-0">
         <Link to="/" className={`${buttonClass} course-card-btn`}>
           View Course
         </Link>
-      </div>
-    </div>
+      </Card.Footer>
+    </Card>
   );
 };
 

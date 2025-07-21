@@ -127,7 +127,17 @@ i.search-icon {
 
 /* =========popular courses section =========== */
 
-section.popular-courses {
+.cardShadow {
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.1rem #0000003b;
+}
+
+.courseCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* section.popular-courses {
   padding: 3rem 0px;
 }
 
@@ -191,8 +201,8 @@ div.card img {
 }
 
 .carousel-indicators .active {
-  background-color: red !important; /* Change this to your desired color */
-}
+  background-color: red !important; 
+} */
 
 /* sub banner section====================== */
 #sub-banner {
@@ -410,13 +420,5 @@ div.contact div.centered-content input[type="text"] {
   /* search bar section============= */
   #search-bar {
     width: 100%;
-  }
-
-  /* popular courses section============= */
-
-  section.popular-courses div.header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

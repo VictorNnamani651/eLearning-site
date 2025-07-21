@@ -1,101 +1,92 @@
+import { useState, useEffect } from "react";
+import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import CourseCard from "./courseCard";
 import { popularCoursesData } from "../db";
-import { Link } from "react-router-dom";
 
 const PopularCourses = () => {
+  // State to track if the view is considered "mobile" (smaller than Bootstrap's 'md' breakpoint of 768px)
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    // Function to update the view state on window resize
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 768);
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
+
   return (
-    <section className="popular-courses">
-      <div className="container-md">
-        <div className="header">
-          <div className="texts">
-            <h3>Popular Courses</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-              consequuntur!
-            </p>
-          </div>
-          <button className="browse-all-courses">
-            <Link to="/coursePage">
-              Browse All Courses<i className="fa fa-angle-double-right"></i>
-            </Link>
-          </button>
-        </div>
-
-        {/* COURSE CARD CONTAINER */}
-        <div className="course-card-container">
-          {/* FOR LARGER SCREENS */}
-          <div
-            className="row d-none d-md-flex gap-2"
-            id="course-view-for-lg-screens"
+    // Use React Bootstrap Container for overall page width and responsiveness
+    <Container as="section" fluid="md" className="popular-courses py-5">
+      {/* Header Section: Using React Bootstrap Row and Col for layout, Button for action */}
+      <Row className="align-items-center mb-4 text-center text-md-start">
+        <Col md={8}>
+          {" "}
+          {/* Occupy 8 columns on medium screens and up */}
+          <h3>Popular Courses</h3>
+          <p className="text-muted">
+            Explore our most sought-after courses designed to boost your skills
+            and career.
+          </p>
+        </Col>
+        <Col md={4} className="text-md-end mt-3 mt-md-0">
+          {" "}
+          {/* Occupy 4 columns, right-aligned on medium and up */}
+          {/* React Bootstrap Button component, styled as outline-primary */}
+          <Button
+            as={Link}
+            to="/coursePage"
+            variant="outline-primary"
+            className="browse-all-courses"
           >
-            {popularCoursesData.map((course) => (
-              <CourseCard key={course.id} course={course} columnClass={"col"} />
+            Browse All Courses <i className="fa fa-angle-double-right ms-2"></i>
+          </Button>
+        </Col>
+      </Row>
+
+      {/* Course Cards Display: Conditional rendering based on screen size */}
+      <div>
+        {isMobileView ? (
+          // --- React Bootstrap Carousel for Mobile View (below 768px) ---
+          <Carousel
+            indicators
+            interval={null}
+            keyboard={true}
+            controls={true}
+            variant="dark"
+            id="popularCoursesCarousel"
+          >
+            {popularCoursesData.map((course, index) => (
+              <Carousel.Item key={course.id}>
+                {/* CourseCard content for each slide */}
+                <CourseCard course={course} />
+                <br />
+                <br />
+                {/* Carousel.Caption can be added here if needed */}
+              </Carousel.Item>
             ))}
-          </div>
-
-          {/* POPULAR COURSES CARDS CAROUSEL FOR MOBILE VIEW */}
-          <div
-            id="carouselExampleDark"
-            className="carousel carousel-dark slide d-md-none"
-          >
-            <div className="carousel-indicators top-100">
-              {popularCoursesData.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  data-bs-target="#carouselExampleDark"
-                  data-bs-slide-to={index}
-                  className={
-                    index === 0
-                      ? "active rounded rounded-circle"
-                      : "rounded rounded-circle"
-                  }
-                  aria-current={index === 0 ? "true" : "false"}
-                  aria-label={`Slide ${index + 1}`}
-                ></button>
-              ))}
-            </div>
-            <div className="carousel-inner">
-              {popularCoursesData.map((course, index) => (
-                <div
-                  key={course.id}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
-                  data-bs-interval={index === 1 ? "2000" : "10000"}
-                >
-                  {/* Note: I'm using a small optimization to reuse the CourseCard component here
-                      by wrapping it in a carousel-specific div. */}
-                  <CourseCard course={course} columnClass={"col"} />
-                </div>
-              ))}
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
+          </Carousel>
+        ) : (
+          // --- React Bootstrap Grid for Desktop/Tablet View (768px and above) ---
+          <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
+            {popularCoursesData.map((course) => (
+              // Use React Bootstrap Col component for each card in the grid
+              <Col key={course.id}>
+                <CourseCard course={course} />
+              </Col>
+            ))}
+          </Row>
+        )}
       </div>
-    </section>
+    </Container>
   );
 };
 
