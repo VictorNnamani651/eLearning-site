@@ -1,8 +1,29 @@
-import { footerLinksData, footerGalleryData } from "../db";
+import { useEffect, useState } from "react";
 import FooterLinks from "./footerLinks";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [footerLinksData, setFooterLinks] = useState([]);
+  const [footerGalleryData, setFooterGallery] = useState([]);
+  useEffect(() => {
+    const fetchFooterData = async () => {
+      try {
+        const [linksResponse, galleryResponse] = await Promise.all([
+          fetch(API.FOOTER_LINKS),
+          fetch(API.FOOTER_GALLERY),
+        ]);
+        const linksData = await linksResponse.json();
+        const galleryData = await galleryResponse.json();
+        setFooterLinks(linksData);
+        setFooterGallery(galleryData);
+      } catch (error) {
+        console.error("Error fetching footer data:", error);
+      }
+    };
+
+    fetchFooterData();
+  }, []);
+
   return (
     <section className="py-5 border-5 border-top border-danger" id="footer">
       <div className="container-md">

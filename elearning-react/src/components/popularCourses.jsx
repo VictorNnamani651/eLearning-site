@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import CourseCard from "./courseCard";
-import { popularCoursesData } from "../db";
+import { API } from "../api/api";
 
 const PopularCourses = () => {
+  const [popularCourses, setPopularCourses] = useState([]);
   // State to track if the view is considered "mobile" (smaller than Bootstrap's 'md' breakpoint of 768px)
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 768);
 
@@ -22,7 +23,19 @@ const PopularCourses = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleans up on unmount
+  useEffect(() => {
+    const fetchPopularCourses = async () => {
+      try {
+        const res = await fetch(API.POPULAR_COURSES);
+        const data = await res.json();
+        setPopularCourses(data);
+      } catch (err) {
+        console.error("Failed to fetch popular courses:", err);
+      }
+    };
 
+    fetchPopularCourses();
+  }, []);
   return (
     // Use React Bootstrap Container for overall page width and responsiveness
     <Container as="section" fluid="md" className="popular-courses py-5">
@@ -64,7 +77,7 @@ const PopularCourses = () => {
             variant="dark"
             id="popularCoursesCarousel"
           >
-            {popularCoursesData.map((course, index) => (
+            {popularCourses.map((course, index) => (
               <Carousel.Item key={course.id}>
                 {/* CourseCard content for each slide */}
                 <CourseCard course={course} />
@@ -77,7 +90,7 @@ const PopularCourses = () => {
         ) : (
           // --- React Bootstrap Grid for Desktop/Tablet View (768px and above) ---
           <Row xs={1} md={2} lg={4} className="g-4 justify-content-center">
-            {popularCoursesData.map((course) => (
+            {popularCourses.map((course) => (
               // Use React Bootstrap Col component for each card in the grid
               <Col key={course.id}>
                 <CourseCard course={course} />
