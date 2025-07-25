@@ -1,17 +1,8 @@
-/**
- * LoadingScreen Component
- *
- * This component displays a full-screen loading spinner and text.
- * It is designed to be used directly in conditional rendering,
- * for example: `{isLoading ? <LoadingScreen /> : <Content />}`.
- * It does not act as an overlay or manage its own visibility;
- * its visibility is controlled by the parent component's state.
- */
 function LoadingScreen() {
   return (
     <div
       className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-light"
-      style={{ fontFamily: '"Inter", sans-serif' }} // Apply Inter font
+      style={{ fontFamily: '"Inter", sans-serif' }} 
     >
       {/* Custom spinning loader element */}
       <div
@@ -47,4 +38,4 @@ function LoadingScreen() {
   );
 }
 
-export default LoadingScreen; // Export the component for use in other files
+export default LoadingScreen;

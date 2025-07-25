@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const SearchBar = () => {
   // State to manage the value of the search input
