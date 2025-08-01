@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import InstructorCard from "./InstructorCard";
+import InstructorCard from "./instructorCard";
 import { API } from "../api/api";
 import LoadingScreen from "./loading";
 
