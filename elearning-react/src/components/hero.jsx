@@ -22,7 +22,7 @@ const HeroSection = () => {
               Start Free Trial
             </Link>
             <Link
-              to="/signUp"
+              to="/coursePage"
               className="btn btn-outline-light col-6 col-md-4 mx-auto animate__animated animate__fadeInUp browse-courses-btn"
             >
               Browse Courses
