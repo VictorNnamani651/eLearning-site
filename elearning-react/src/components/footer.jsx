@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import FooterLinks from "./footerLinks";
 import { Link } from "react-router-dom";
+import { API } from "../api/api";
 
 const Footer = () => {
   const [footerLinksData, setFooterLinks] = useState([]);
@@ -36,8 +37,8 @@ const Footer = () => {
                   alt="Logo"
                 />
               </li>
-              <li>
-                <i className="bi bi-envelope-at"></i>sample@mail.com
+              <li className="footer-email">
+                <i className="bi bi-envelope-at"></i>victornnamani651@mail.com
               </li>
               <li>
                 <i className="bi bi-telephone-fill"></i>+(234) 9014 193 475
