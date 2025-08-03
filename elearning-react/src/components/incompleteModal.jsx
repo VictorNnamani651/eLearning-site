@@ -4,14 +4,17 @@ const IncompleteProjectModal = () => {
   // State to control the visibility of the modal
   const [showModal, setShowModal] = useState(false);
 
-  // useEffect to show the modal automatically on component mount,
-  // which is the React equivalent of `DOMContentLoaded`
+  // Check sessionStorage to see if modal has been dismissed before and if it has then don't show it again (cause it's annoying)
   useEffect(() => {
-    setShowModal(true);
-  }, []); // The empty dependency array ensures this effect runs only once
+    const dismissed = sessionStorage.getItem("incompleteProjectModalDismissed");
+    if (!dismissed) {
+      setShowModal(true);
+    }
+  }, []);
 
   const handleClose = () => {
     setShowModal(false);
+    sessionStorage.setItem("incompleteProjectModalDismissed", "true");
   };
 
   // Conditional rendering based on the `showModal` state
