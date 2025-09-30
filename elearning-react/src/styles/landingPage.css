@@ -35,7 +35,7 @@ nav {
 section#hero-section {
   height: 88vh;
   background-image: linear-gradient(#3b3333a4, #3b3333a4),
-    url(../assets/images/pexels-element5-1370295.webp);
+    url(../assets/images/hero-bg-tablet.webp);
   background-size: cover;
   background-position: center;
 }
@@ -319,7 +319,7 @@ div.elearning-col li i {
   margin-right: 0.7rem;
 }
 
-.footer-email{
+.footer-email {
   font-size: 0.9rem;
 }
 
@@ -387,11 +387,25 @@ div.contact div.centered-content input[type="text"] {
   background-color: #dd3333;
 } */
 
-/* ===========mobile styling============ */
+/* ===========Media queries============ */
 
 @media (max-width: 767px) {
   .navbar-brand img {
     margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    section#hero-section {
+      background-image: linear-gradient(#3b3333a4, #3b3333a4),
+    url(../assets/images/hero-bg-tablet.webp);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    section#hero-section {
+      background-image: linear-gradient(#3b3333a4, #3b3333a4),
+    url(../assets/images/hero-bg-desktop.webp);
+    }
   }
 
   /* ==============side bar header(containing the logo and close btn)========== */
