@@ -21,7 +21,7 @@ const SearchBar = () => {
           onChange={handleInputChange}
         />
         <button className="search-icon-container">
-          <i className="fa fa-search search-icon"></i>
+          <i className="fa fa-search search_icon"></i>
         </button>
       </div>
     </section>
