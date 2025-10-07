@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
-    <section id="hero-section">
+    <section id="hero-section" style={{ height: "100vh" }}>
       <div className="container-md" id="content-container">
         <div className="centered-content">
           <div className="texts">
