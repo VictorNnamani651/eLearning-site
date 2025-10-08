@@ -20,7 +20,7 @@ const Navbar2 = ({ logo, style }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [searchFocused, setSearchFocused] = useState(false);
   //  amount of spacer for the Spacer div, this is to prevent content from going under fixed navbar
-  const defaultSpace = { height: "80px" };
+  const defaultSpace = { height: "50px" };
   // this will make the space below the navabar to have a default value of 80px but when another height is added, due to placement order of the styles the newly added height becomes the height that will be used
   const customSpace = { ...defaultSpace, ...style };
 
@@ -36,6 +36,21 @@ const Navbar2 = ({ logo, style }) => {
   const logoSrc =
     logo ||
     'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Crect fill="%23DD3333" width="40" height="40" rx="8"/%3E%3Ctext x="20" y="26" font-size="20" text-anchor="middle" fill="white"%3E📚%3C/text%3E%3C/svg%3E';
+
+  // Dropdown close delay timers
+  const [coursesTimer, setCoursesTimer] = useState(null);
+  const [pagesTimer, setPagesTimer] = useState(null);
+  const [blogTimer, setBlogTimer] = useState(null);
+
+  // Helper functions for delayed close
+  const handleDropdownEnter = (setOpen, timer, setTimer) => {
+    if (timer) clearTimeout(timer);
+    setOpen(true);
+  };
+  const handleDropdownLeave = (setOpen, setTimer) => {
+    const t = setTimeout(() => setOpen(false), 200); // 200ms delay
+    setTimer(t);
+  };
 
   return (
     <>
@@ -97,8 +112,16 @@ const Navbar2 = ({ logo, style }) => {
                 {/* Courses Dropdown */}
                 <div
                   className={`dropdown ${coursesOpen ? "show" : ""}`}
-                  onMouseEnter={() => setCoursesOpen(true)}
-                  onMouseLeave={() => setCoursesOpen(false)}
+                  onMouseEnter={() =>
+                    handleDropdownEnter(
+                      setCoursesOpen,
+                      coursesTimer,
+                      setCoursesTimer
+                    )
+                  }
+                  onMouseLeave={() =>
+                    handleDropdownLeave(setCoursesOpen, setCoursesTimer)
+                  }
                 >
                   <button
                     className="btn dropdown-toggle me-3 nav-dropdown-btn"
@@ -145,8 +168,12 @@ const Navbar2 = ({ logo, style }) => {
                 {/* Pages Dropdown */}
                 <div
                   className={`dropdown ${pagesOpen ? "show" : ""}`}
-                  onMouseEnter={() => setPagesOpen(true)}
-                  onMouseLeave={() => setPagesOpen(false)}
+                  onMouseEnter={() =>
+                    handleDropdownEnter(setPagesOpen, pagesTimer, setPagesTimer)
+                  }
+                  onMouseLeave={() =>
+                    handleDropdownLeave(setPagesOpen, setPagesTimer)
+                  }
                 >
                   <button
                     className="btn dropdown-toggle me-3 nav-dropdown-btn"
@@ -183,8 +210,12 @@ const Navbar2 = ({ logo, style }) => {
                 {/* Blog Dropdown */}
                 <div
                   className={`dropdown ${blogOpen ? "show" : ""}`}
-                  onMouseEnter={() => setBlogOpen(true)}
-                  onMouseLeave={() => setBlogOpen(false)}
+                  onMouseEnter={() =>
+                    handleDropdownEnter(setBlogOpen, blogTimer, setBlogTimer)
+                  }
+                  onMouseLeave={() =>
+                    handleDropdownLeave(setBlogOpen, setBlogTimer)
+                  }
                 >
                   <button
                     className="btn dropdown-toggle me-3 nav-dropdown-btn"
@@ -312,14 +343,14 @@ const Navbar2 = ({ logo, style }) => {
           transform: translateX(-50%);
           width: 0;
           height: 3px;
-          background: linear-gradient(135deg, #DD3333 0%, #000000 100%);
+          background: #61BA5F;
           transition: width 0.3s ease;
           border-radius: 2px;
         }
 
         .nav-link:hover,
         .nav-link.active {
-          color: #DD3333 !important;
+          color: #61BA5F !important;
         }
 
         .nav-link:hover::after,
@@ -338,9 +369,9 @@ const Navbar2 = ({ logo, style }) => {
 
         .nav-dropdown-btn:hover,
         .nav-dropdown-btn:focus {
-          color: #DD3333;
-          background: rgba(221, 51, 51, 0.05);
-          border-color: rgba(221, 51, 51, 0.2);
+          color: #61BA5F;
+          background: rgba(97, 186, 95, 0.05);
+          border-color: rgba(97, 186, 95, 0.2);
         }
 
         /* Dropdown Menu Styles */
@@ -360,8 +391,8 @@ const Navbar2 = ({ logo, style }) => {
         }
 
         .dropdown-item:hover {
-          background: linear-gradient(135deg, rgba(221, 51, 51, 0.1) 0%, rgba(0, 0, 0, 0.05) 100%);
-          color: #DD3333;
+          background: rgba(97, 186, 95, 0.1);
+          color: #61BA5F;
           transform: translateX(5px);
         }
 
@@ -391,13 +422,13 @@ const Navbar2 = ({ logo, style }) => {
 
         .search-input:focus {
           outline: none;
-          border-color: #DD3333;
+          border-color: #61BA5F;
           width: 250px;
-          box-shadow: 0 0 0 3px rgba(221, 51, 51, 0.1);
+          box-shadow: 0 0 0 3px rgba(97, 186, 95, 0.1);
         }
 
         .search-focused .search-icon {
-          color: #DD3333;
+          color: #61BA5F;
         }
 
         /* Navigation Icons */
@@ -409,7 +440,7 @@ const Navbar2 = ({ logo, style }) => {
         }
 
         .nav-icon-wrapper:hover {
-          background: rgba(221, 51, 51, 0.1);
+          background: rgba(97, 186, 95, 0.1);
         }
 
         .nav-icon {
@@ -418,14 +449,14 @@ const Navbar2 = ({ logo, style }) => {
         }
 
         .nav-icon-wrapper:hover .nav-icon {
-          color: #DD3333;
+          color: #61BA5F;
         }
 
         .notification-badge {
           position: absolute;
           top: 2px;
           right: 2px;
-          background: #DD3333;
+          background: #61BA5F;
           color: white;
           font-size: 0.65rem;
           font-weight: 700;
@@ -456,7 +487,7 @@ const Navbar2 = ({ logo, style }) => {
         }
 
         .btn-primary-custom {
-          background: linear-gradient(135deg, #DD3333 0%, #000000 100%);
+          background: #61BA5F;
           color: white;
           border: none;
           border-radius: 25px;
@@ -467,7 +498,7 @@ const Navbar2 = ({ logo, style }) => {
 
         .btn-primary-custom:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(221, 51, 51, 0.4);
+          box-shadow: 0 8px 20px rgba(97, 186, 95, 0.4);
         }
 
         /* Mobile Offcanvas Styles */
