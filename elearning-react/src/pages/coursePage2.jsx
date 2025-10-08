@@ -201,7 +201,7 @@ const CoursePage2 = () => {
           <div className="row align-items-center mb-4">
             <div className="col-lg-10">
               <h1 className="display-4 fw-bold mb-2">
-                Discover Your Next <span className="text-gradient">Skill</span>
+                Discover Your Next Skill
               </h1>
               <p className="lead text-muted">
                 Choose from our expertly crafted courses to advance your career
@@ -321,13 +321,6 @@ const CoursePage2 = () => {
         .course-listing-page {
           min-height: 100vh;
           background: linear-gradient(135deg, #FFFFFF 0%, #f5f5f5 50%, #e8e8e8 100%);
-        }
-
-        .text-gradient {
-          background: linear-gradient(135deg, #DD3333 0%, #000000 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
         }
 
         .course-card {
