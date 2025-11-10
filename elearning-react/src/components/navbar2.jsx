@@ -138,6 +138,11 @@ const Navbar2 = ({ logo, style }) => {
                     }`}
                   >
                     <li>
+                      <Link to="/coursePage" className="dropdown-item">
+                        All Courses
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/" className="dropdown-item">
                         Digital Marketing
                       </Link>
