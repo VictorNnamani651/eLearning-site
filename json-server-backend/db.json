@@ -123,282 +123,427 @@
   ],
   "courses": [
     {
-      "id": 5,
+      "id": 1,
       "title": "Digital Marketing Fundamentals",
-      "description": "Learn the essentials of digital marketing, including SEO, social media, and content strategy.",
-      "imageSrc": "https://placehold.co/400x225/E0B3AA/000000?text=Digital+Marketing"
+      "description": "Master the essentials of digital marketing, including SEO, social media, and content strategy with hands-on projects.",
+      "category": "Digital Marketing",
+      "level": "Beginner",
+      "duration": "6 weeks",
+      "students": "1.2k",
+      "rating": "4.8",
+      "price": "99",
+      "bgClass": "bg-gradient-pink",
+      "icon": "📱",
+      "image": "/assets/images/pexels-element5-1370295.webp"
+    }, 
+    {
+      "id": 2,
+      "title": "Introduction to Web Development",
+      "description": "Learn the basics of HTML, CSS, and JavaScript to build your first responsive website from scratch.",
+      "category": "Web Development",
+      "level": "Beginner",
+      "duration": "8 weeks",
+      "students": "2.1k",
+      "rating": "4.9",
+      "price": "79",
+      "bgClass": "bg-gradient-blue",
+      "icon": "💻",
+      "image": "/assets/images/Learn-Web-Development.webp"
+    },
+    {
+      "id": 3,
+      "title": "React for Beginners",
+      "description": "Build interactive user interfaces and learn modern frontend development using React and component-based architecture.",
+      "category": "Frontend Development",
+      "level": "Intermediate",
+      "duration": "6 weeks",
+      "students": "3.5k",
+      "rating": "4.7",
+      "price": "120",
+      "bgClass": "bg-gradient-cyan",
+      "icon": "⚛️",
+      "image": "/assets/images/images-book-1-5.png"
+    },
+    {
+      "id": 4,
+      "title": "Node.js & Express Crash Course",
+      "description": "Learn how to create scalable server-side applications with Node.js and Express framework.",
+      "category": "Backend Development",
+      "level": "Intermediate",
+      "duration": "5 weeks",
+      "students": "2.8k",
+      "rating": "4.6",
+      "price": "110",
+      "bgClass": "bg-gradient-green",
+      "icon": "🧠",
+      "image": "/assets/images/database-management-image1.webp"
+    },
+    {
+      "id": 5,
+      "title": "UI/UX Design Essentials",
+      "description": "Understand design principles, wireframing, prototyping, and user testing to create intuitive digital experiences.",
+      "category": "Design",
+      "level": "Beginner",
+      "duration": "7 weeks",
+      "students": "1.9k",
+      "rating": "4.8",
+      "price": "95",
+      "bgClass": "bg-gradient-purple",
+      "icon": "🎨",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 6,
-      "title": "Introduction to Graphic Design",
-      "description": "Master the basics of visual communication and design tools like Adobe Photoshop and Illustrator.",
-      "imageSrc": "https://placehold.co/400x225/CCBBE0/000000?text=Graphic+Design"
+      "title": "Advanced JavaScript Techniques",
+      "description": "Deep dive into closures, promises, async/await, and ES6+ features to master JavaScript like a pro.",
+      "category": "Programming",
+      "level": "Advanced",
+      "duration": "6 weeks",
+      "students": "2.3k",
+      "rating": "4.9",
+      "price": "130",
+      "bgClass": "bg-gradient-orange",
+      "icon": "📘",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 7,
-      "title": "Cloud Computing Basics (AWS)",
-      "description": "An introductory course to cloud computing concepts and Amazon Web Services (AWS) fundamentals.",
-      "imageSrc": "https://placehold.co/400x225/B3E0AA/000000?text=Cloud+Computing"
+      "title": "Python for Data Analysis",
+      "description": "Learn how to analyze data using Python libraries like pandas, NumPy, and Matplotlib.",
+      "category": "Data Science",
+      "level": "Intermediate",
+      "duration": "8 weeks",
+      "students": "4.1k",
+      "rating": "4.8",
+      "price": "140",
+      "bgClass": "bg-gradient-yellow",
+      "icon": "🐍",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 8,
-      "title": "Mobile App Development (Android)",
-      "description": "Develop your first Android applications using Java/Kotlin and the Android Studio IDE.",
-      "imageSrc": "https://placehold.co/400x225/FFDDAA/000000?text=Mobile+App+Dev"
+      "title": "Machine Learning with Python",
+      "description": "Build predictive models and understand algorithms like regression, decision trees, and neural networks.",
+      "category": "Artificial Intelligence",
+      "level": "Advanced",
+      "duration": "10 weeks",
+      "students": "3.8k",
+      "rating": "4.7",
+      "price": "199",
+      "bgClass": "bg-gradient-indigo",
+      "icon": "🤖",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 9,
-      "title": "Data Science with Python",
-      "description": "Explore the basics of data analysis, visualization, and machine learning using Python.",
-      "imageSrc": "https://placehold.co/400x225/AACCEE/000000?text=Data+Science"
+      "title": "Database Management with MongoDB",
+      "description": "Learn how to design, query, and manage NoSQL databases using MongoDB for modern web apps.",
+      "category": "Database",
+      "level": "Intermediate",
+      "duration": "5 weeks",
+      "students": "2.4k",
+      "rating": "4.6",
+      "price": "99",
+      "bgClass": "bg-gradient-green",
+      "icon": "🗄️",
+      "image": "/assets/images/database-management-image1.webp"
     },
     {
       "id": 10,
-      "title": "Digital Marketing Fundamentals",
-      "description": "Learn the essentials of digital marketing, including SEO, social media, and content strategy.",
-      "imageSrc": "https://placehold.co/400x225/E0B3AA/000000?text=Digital+Marketing"
+      "title": "Cloud Computing with AWS",
+      "description": "Get started with Amazon Web Services to deploy, manage, and scale cloud applications effectively.",
+      "category": "Cloud",
+      "level": "Intermediate",
+      "duration": "7 weeks",
+      "students": "1.7k",
+      "rating": "4.5",
+      "price": "160",
+      "bgClass": "bg-gradient-sky",
+      "icon": "☁️",
+      "image": "/assets/images/pexels-element5-1370295.webp"
     },
     {
       "id": 11,
-      "title": "Introduction to Graphic Design",
-      "description": "Master the basics of visual communication and design tools like Adobe Photoshop and Illustrator.",
-      "imageSrc": "https://placehold.co/400x225/CCBBE0/000000?text=Graphic+Design"
+      "title": "Cybersecurity Basics",
+      "description": "Understand the fundamentals of securing networks, applications, and systems from cyber threats.",
+      "category": "Cybersecurity",
+      "level": "Beginner",
+      "duration": "6 weeks",
+      "students": "2.9k",
+      "rating": "4.8",
+      "price": "115",
+      "bgClass": "bg-gradient-red",
+      "icon": "🔐",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 12,
-      "title": "Cloud Computing Basics (AWS)",
-      "description": "An introductory course to cloud computing concepts and Amazon Web Services (AWS) fundamentals.",
-      "imageSrc": "https://placehold.co/400x225/B3E0AA/000000?text=Cloud+Computing"
+      "title": "Full-Stack Web Development",
+      "description": "Become a full-stack developer by mastering frontend (React) and backend (Node.js) technologies.",
+      "category": "Web Development",
+      "level": "Advanced",
+      "duration": "12 weeks",
+      "students": "5.2k",
+      "rating": "4.9",
+      "price": "249",
+      "bgClass": "bg-gradient-teal",
+      "icon": "🧩",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 13,
-      "title": "Mobile App Development (Android)",
-      "description": "Develop your first Android applications using Java/Kotlin and the Android Studio IDE.",
-      "imageSrc": "https://placehold.co/400x225/FFDDAA/000000?text=Mobile+App+Dev.."
+      "title": "Figma for Designers",
+      "description": "Design beautiful interfaces, create interactive prototypes, and collaborate effectively using Figma.",
+      "category": "Design",
+      "level": "Beginner",
+      "duration": "4 weeks",
+      "students": "1.5k",
+      "rating": "4.7",
+      "price": "80",
+      "bgClass": "bg-gradient-violet",
+      "icon": "🖌️",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 14,
-      "title": "Data Science with Python",
-      "description": "Explore the basics of data analysis, visualization, and machine learning using Python.",
-      "imageSrc": "https://placehold.co/400x225/AACCEE/000000?text=Data+Science"
+      "title": "Next.js Masterclass",
+      "description": "Learn server-side rendering, static site generation, and routing with Next.js to build blazing-fast web apps.",
+      "category": "Frontend Development",
+      "level": "Advanced",
+      "duration": "6 weeks",
+      "students": "2.2k",
+      "rating": "4.9",
+      "price": "135",
+      "bgClass": "bg-gradient-cyan",
+      "icon": "⚡",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 15,
-      "title": "Web Development with HTML & CSS",
-      "description": "Build responsive websites using HTML5 and modern CSS techniques.",
-      "imageSrc": "https://placehold.co/400x225/99CCFF/000000?text=HTML+CSS"
+      "title": "Version Control with Git & GitHub",
+      "description": "Track your code, collaborate with others, and manage projects efficiently using Git and GitHub.",
+      "category": "Software Engineering",
+      "level": "Beginner",
+      "duration": "3 weeks",
+      "students": "3.9k",
+      "rating": "4.8",
+      "price": "49",
+      "bgClass": "bg-gradient-gray",
+      "icon": "🌿",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 16,
-      "title": "JavaScript Essentials",
-      "description": "Learn core JavaScript concepts including DOM manipulation and ES6 features.",
-      "imageSrc": "https://placehold.co/400x225/FFCC99/000000?text=JavaScript"
+      "title": "Intro to Artificial Intelligence",
+      "description": "Explore the concepts of AI, from problem-solving to neural networks, and real-world applications.",
+      "category": "Artificial Intelligence",
+      "level": "Beginner",
+      "duration": "6 weeks",
+      "students": "3.4k",
+      "rating": "4.7",
+      "price": "99",
+      "bgClass": "bg-gradient-indigo",
+      "icon": "🧠",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 17,
-      "title": "React for Beginners",
-      "description": "Understand React fundamentals, components, props, and state management.",
-      "imageSrc": "https://placehold.co/400x225/CCFFCC/000000?text=React"
+      "title": "Data Visualization with Tableau",
+      "description": "Create interactive dashboards and visual insights from data using Tableau and storytelling techniques.",
+      "category": "Data Analytics",
+      "level": "Intermediate",
+      "duration": "5 weeks",
+      "students": "1.6k",
+      "rating": "4.6",
+      "price": "119",
+      "bgClass": "bg-gradient-orange",
+      "icon": "📊",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 18,
-      "title": "Advanced React Patterns",
-      "description": "Dive deeper into hooks, context API, and performance optimization.",
-      "imageSrc": "https://placehold.co/400x225/FF9999/000000?text=Advanced+React"
+      "title": "Mobile App Development with React Native",
+      "description": "Build cross-platform mobile applications using React Native and Expo for Android and iOS.",
+      "category": "Mobile Development",
+      "level": "Intermediate",
+      "duration": "8 weeks",
+      "students": "2.5k",
+      "rating": "4.8",
+      "price": "149",
+      "bgClass": "bg-gradient-blue",
+      "icon": "📱",
+      "image": "/assets/images/pexels-element5-1370295.webp"
     },
     {
       "id": 19,
-      "title": "Node.js Fundamentals",
-      "description": "Learn backend development with Node.js, Express, and REST APIs.",
-      "imageSrc": "https://placehold.co/400x225/CCCCFF/000000?text=Node.js"
+      "title": "Agile Project Management",
+      "description": "Learn Scrum, Kanban, and Agile principles to effectively manage software projects.",
+      "category": "Management",
+      "level": "Intermediate",
+      "duration": "4 weeks",
+      "students": "1.3k",
+      "rating": "4.5",
+      "price": "89",
+      "bgClass": "bg-gradient-green",
+      "icon": "🧭",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 20,
-      "title": "Full-Stack Development",
-      "description": "Combine frontend and backend skills to build complete web applications.",
-      "imageSrc": "https://placehold.co/400x225/99FF99/000000?text=Full+Stack"
+      "title": "Content Creation for Social Media",
+      "description": "Create engaging content for Instagram, YouTube, and TikTok using storytelling and editing tools.",
+      "category": "Digital Marketing",
+      "level": "Beginner",
+      "duration": "5 weeks",
+      "students": "2.0k",
+      "rating": "4.7",
+      "price": "75",
+      "bgClass": "bg-gradient-pink",
+      "icon": "📸",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 21,
-      "title": "Database Management (SQL)",
-      "description": "Master relational databases, queries, and normalization techniques.",
-      "imageSrc": "https://placehold.co/400x225/FFCCFF/000000?text=SQL"
+      "title": "Blockchain Essentials",
+      "description": "Understand blockchain technology, smart contracts, and decentralized applications (dApps).",
+      "category": "Blockchain",
+      "level": "Intermediate",
+      "duration": "6 weeks",
+      "students": "1.4k",
+      "rating": "4.6",
+      "price": "139",
+      "bgClass": "bg-gradient-teal",
+      "icon": "⛓️",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 22,
-      "title": "NoSQL Databases (MongoDB)",
-      "description": "Learn document-based data storage and querying with MongoDB.",
-      "imageSrc": "https://placehold.co/400x225/CCFF99/000000?text=MongoDB"
+      "title": "DevOps Foundations",
+      "description": "Learn CI/CD pipelines, Docker, and automation to streamline the software delivery process.",
+      "category": "DevOps",
+      "level": "Advanced",
+      "duration": "7 weeks",
+      "students": "2.6k",
+      "rating": "4.8",
+      "price": "159",
+      "bgClass": "bg-gradient-gray",
+      "icon": "⚙️",
+      "image": "/assets/images/pexels-element5-1370295.webp"
     },
     {
       "id": 23,
-      "title": "Cybersecurity Basics",
-      "description": "Understand online security, encryption, and ethical hacking fundamentals.",
-      "imageSrc": "https://placehold.co/400x225/FFCC00/000000?text=Cybersecurity"
+      "title": "C++ Programming for Beginners",
+      "description": "Understand the fundamentals of C++ programming and object-oriented design principles.",
+      "category": "Programming",
+      "level": "Beginner",
+      "duration": "6 weeks",
+      "students": "1.9k",
+      "rating": "4.7",
+      "price": "85",
+      "bgClass": "bg-gradient-blue",
+      "icon": "💡",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 24,
-      "title": "Artificial Intelligence Overview",
-      "description": "Explore AI concepts, machine learning, and neural networks.",
-      "imageSrc": "https://placehold.co/400x225/99CCCC/000000?text=AI"
+      "title": "UI Animation with Framer Motion",
+      "description": "Add life to your web projects by learning animation and motion design in React with Framer Motion.",
+      "category": "Frontend Development",
+      "level": "Intermediate",
+      "duration": "4 weeks",
+      "students": "1.1k",
+      "rating": "4.8",
+      "price": "99",
+      "bgClass": "bg-gradient-purple",
+      "icon": "🎞️",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 25,
-      "title": "Machine Learning with Scikit-Learn",
-      "description": "Hands-on ML algorithms including regression, classification, and clustering.",
-      "imageSrc": "https://placehold.co/400x225/FF9966/000000?text=Machine+Learning"
+      "title": "Search Engine Optimization (SEO)",
+      "description": "Boost website traffic and visibility by mastering on-page, off-page, and technical SEO strategies.",
+      "category": "Digital Marketing",
+      "level": "Intermediate",
+      "duration": "5 weeks",
+      "students": "2.7k",
+      "rating": "4.9",
+      "price": "109",
+      "bgClass": "bg-gradient-yellow",
+      "icon": "🔍",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 26,
-      "title": "Deep Learning with TensorFlow",
-      "description": "Build neural networks and train models using TensorFlow and Keras.",
-      "imageSrc": "https://placehold.co/400x225/66CCFF/000000?text=Deep+Learning"
+      "title": "Game Development with Unity",
+      "description": "Build interactive 2D and 3D games using Unity and C#, from design to publishing.",
+      "category": "Game Development",
+      "level": "Intermediate",
+      "duration": "10 weeks",
+      "students": "2.0k",
+      "rating": "4.6",
+      "price": "179",
+      "bgClass": "bg-gradient-red",
+      "icon": "🎮",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 27,
-      "title": "Natural Language Processing",
-      "description": "Learn text analysis, sentiment detection, and chatbot development.",
-      "imageSrc": "https://placehold.co/400x225/FF6699/000000?text=NLP"
+      "title": "Docker & Kubernetes Essentials",
+      "description": "Learn how to containerize applications and manage them at scale using Docker and Kubernetes.",
+      "category": "DevOps",
+      "level": "Advanced",
+      "duration": "8 weeks",
+      "students": "1.8k",
+      "rating": "4.8",
+      "price": "189",
+      "bgClass": "bg-gradient-gray",
+      "icon": "🐳",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 28,
-      "title": "Blockchain Fundamentals",
-      "description": "Understand blockchain technology, smart contracts, and cryptocurrencies.",
-      "imageSrc": "https://placehold.co/400x225/CCCC99/000000?text=Blockchain"
+      "title": "Data Structures & Algorithms in JavaScript",
+      "description": "Strengthen your coding skills by mastering essential algorithms and data structures for interviews.",
+      "category": "Programming",
+      "level": "Advanced",
+      "duration": "8 weeks",
+      "students": "3.2k",
+      "rating": "4.9",
+      "price": "129",
+      "bgClass": "bg-gradient-orange",
+      "icon": "🧮",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     },
     {
       "id": 29,
-      "title": "DevOps Essentials",
-      "description": "Learn CI/CD pipelines, Docker, and Kubernetes basics.",
-      "imageSrc": "https://placehold.co/400x225/99FFCC/000000?text=DevOps"
+      "title": "Cloud Deployment with Firebase",
+      "description": "Build and deploy scalable web applications using Firebase authentication, Firestore, and hosting.",
+      "category": "Backend Development",
+      "level": "Intermediate",
+      "duration": "5 weeks",
+      "students": "2.3k",
+      "rating": "4.7",
+      "price": "119",
+      "bgClass": "bg-gradient-blue",
+      "icon": "🔥",
+      "image": "/assets/images/images-book-1-5.png"
     },
     {
       "id": 30,
-      "title": "Agile Project Management",
-      "description": "Master Scrum, Kanban, and agile methodologies for software projects.",
-      "imageSrc": "https://placehold.co/400x225/FFCC66/000000?text=Agile"
-    },
-    {
-      "id": 31,
-      "title": "UI/UX Design Principles",
-      "description": "Learn user-centered design, wireframing, and prototyping.",
-      "imageSrc": "https://placehold.co/400x225/99CC99/000000?text=UI+UX"
-    },
-    {
-      "id": 32,
-      "title": "Game Development with Unity",
-      "description": "Create 2D and 3D games using Unity and C# scripting.",
-      "imageSrc": "https://placehold.co/400x225/FF9999/000000?text=Unity"
-    },
-    {
-      "id": 33,
-      "title": "Augmented Reality Development",
-      "description": "Build AR experiences using ARKit, ARCore, and Unity.",
-      "imageSrc": "https://placehold.co/400x225/99CCCC/000000?text=AR"
-    },
-    {
-      "id": 34,
-      "title": "Virtual Reality Development",
-      "description": "Develop immersive VR applications with Oculus and Unity.",
-      "imageSrc": "https://placehold.co/400x225/CC99FF/000000?text=VR"
-    },
-    {
-      "id": 35,
-      "title": "Big Data Analytics",
-      "description": "Learn Hadoop, Spark, and large-scale data processing.",
-      "imageSrc": "https://placehold.co/400x225/FFCC99/000000?text=Big+Data"
-    },
-    {
-      "id": 36,
-      "title": "Internet of Things (IoT)",
-      "description": "Explore IoT devices, sensors, and cloud integration.",
-      "imageSrc": "https://placehold.co/400x225/99FF99/000000?text=IoT"
-    },
-    {
-      "id": 37,
-      "title": "Ethical Hacking",
-      "description": "Learn penetration testing, vulnerability assessment, and security tools.",
-      "imageSrc": "https://placehold.co/400x225/FF6666/000000?text=Ethical+Hacking"
-    },
-    {
-      "id": 38,
-      "title": "Cloud Computing with Azure",
-      "description": "Understand Microsoft Azure services and cloud deployment.",
-      "imageSrc": "https://placehold.co/400x225/99CCFF/000000?text=Azure"
-    },
-    {
-      "id": 39,
-      "title": "Cloud Computing with Google Cloud",
-      "description": "Learn Google Cloud Platform fundamentals and services.",
-      "imageSrc": "https://placehold.co/400x225/FFCCFF/000000?text=GCP"
-    },
-    {
-      "id": 40,
-      "title": "Data Visualization with Tableau",
-      "description": "Create interactive dashboards and visualizations using Tableau.",
-      "imageSrc": "https://placehold.co/400x225/99CCCC/000000?text=Tableau"
-    },
-    {
-      "id": 41,
-      "title": "Data Visualization with Power BI",
-      "description": "Learn business intelligence and reporting with Power BI.",
-      "imageSrc": "https://placehold.co/400x225/FF9966/000000?text=Power+BI"
-    },
-    {
-      "id": 42,
-      "title": "Python for Automation",
-      "description": "Automate repetitive tasks using Python scripting.",
-      "imageSrc": "https://placehold.co/400x225/99FFCC/000000?text=Python+Automation"
-    },
-    {
-      "id": 43,
-      "title": "R Programming for Data Science",
-      "description": "Learn statistical computing and visualization with R.",
-      "imageSrc": "https://placehold.co/400x225/FFCC99/000000?text=R+Programming"
-    },
-    {
-      "id": 44,
-      "title": "Excel for Data Analysis",
-      "description": "Master Excel formulas, pivot tables, and data visualization.",
-      "imageSrc": "https://placehold.co/400x225/99CCFF/000000?text=Excel"
-    },
-    {
-      "id": 45,
-      "title": "Statistics for Data Science",
-      "description": "Understand statistical concepts and their applications in data science.",
-      "imageSrc": "https://placehold.co/400x225/FFCC66/000000?text=Statistics"
-    },
-    {
-      "id": 46,
-      "title": "Time Series Analysis",
-      "description": "Learn techniques for analyzing and forecasting time series data.",
-      "imageSrc": "https://placehold.co/400x225/CCFF99/000000?text=Time+Series"
-    },
-    {
-      "id": 47,
-      "title": "Data Cleaning and Preprocessing",
-      "description": "Master data cleaning techniques to prepare datasets for analysis.",
-      "imageSrc": "https://placehold.co/400x225/FF9999/000000?text=Data+Cleaning"
-    },
-    {
-      "id": 48,
-      "title": "Data Mining Techniques",
-      "description": "Explore data mining methods for discovering patterns in large datasets.",
-      "imageSrc": "https://placehold.co/400x225/99CCCC/000000?text=Data+Mining"
-    },
-    {
-      "id": 49,
-      "title": "Predictive Analytics",
-      "description": "Learn predictive modeling techniques to forecast future trends.",
-      "imageSrc": "https://placehold.co/400x225/CC99FF/000000?text=Predictive+Analytics"
-    },
-    {
-      "id": 50,
-      "title": "Data Ethics and Privacy",
-      "description": "Understand ethical considerations and privacy issues in data handling.",
-      "imageSrc": "https://placehold.co/400x225/FFCC66/000000?text=Data+Ethics"
+      "title": "Portfolio Development for Developers",
+      "description": "Learn how to design and build a professional portfolio that showcases your skills and projects.",
+      "category": "Career Development",
+      "level": "Beginner",
+      "duration": "3 weeks",
+      "students": "1.0k",
+      "rating": "4.8",
+      "price": "59",
+      "bgClass": "bg-gradient-pink",
+      "icon": "💼",
+      "image": "/assets/images/pexels-pixabay-41949.webp"
     }
   ],
+
   "testimonials": [
     {
       "id": 1,
