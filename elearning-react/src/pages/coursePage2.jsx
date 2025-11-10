@@ -1,177 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CourseCard2 from "../components/courseCard2";
 import { Search, Grid, List } from "lucide-react";
 import Navbar2 from "../components/navbar2";
 import logo from "/assets/images/logo-banner.png";
 
-// const CourseCard = ({ course, index }) => {
-//   const [isHovered, setIsHovered] = useState(false);
-
-//   return (
-//     <div
-//       className="course-card card h-100 border-0 shadow-lg"
-//       onMouseEnter={() => setIsHovered(true)}
-//       onMouseLeave={() => setIsHovered(false)}
-//       style={{
-//         animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
-//         transform: isHovered
-//           ? "translateY(-10px) scale(1.02)"
-//           : "translateY(0) scale(1)",
-//         transition: "all 0.5s ease",
-//       }}
-//     >
-//       <div
-//         className={`card-img-top position-relative ${course.bgClass}`}
-//         style={{ height: "200px" }}
-//       >
-//         <div
-//           className="position-absolute top-0 start-0 w-100 h-100"
-//           style={{ background: "rgba(0,0,0,0.1)" }}
-//         ></div>
-//         <div className="position-absolute top-0 end-0 p-3">
-//           <span className="badge bg-white text-dark fw-semibold">
-//             {course.level}
-//           </span>
-//         </div>
-//         <div className="position-absolute bottom-0 start-0 p-3">
-//           <h2 className="text-white fw-bold mb-0" style={{ fontSize: "2rem" }}>
-//             {course.icon} {course.category}
-//           </h2>
-//         </div>
-//         <div className="gradient-overlay"></div>
-//       </div>
-
-//       <div className="card-body p-4">
-//         <h5 className="card-title fw-bold mb-3 course-title">{course.title}</h5>
-//         <p className="card-text text-muted small mb-3">{course.description}</p>
-
-//         <div className="d-flex justify-content-between align-items-center mb-3">
-//           <div className="d-flex gap-3">
-//             <small className="text-muted d-flex align-items-center">
-//               <Clock size={16} className="me-1" />
-//               {course.duration}
-//             </small>
-//             <small className="text-muted d-flex align-items-center">
-//               <Users size={16} className="me-1" />
-//               {course.students}
-//             </small>
-//           </div>
-//           <div className="d-flex align-items-center">
-//             <Star size={16} className="text-warning" fill="currentColor" />
-//             <small className="text-muted ms-1">{course.rating}</small>
-//           </div>
-//         </div>
-
-//         <div className="d-flex justify-content-between align-items-center">
-//           <div className="h4 mb-0 fw-bold">
-//             {course.price === "Free" ? (
-//               <span className="text-success">Free</span>
-//             ) : (
-//               <span className="text-dark">${course.price}</span>
-//             )}
-//           </div>
-//           <button className="btn btn-gradient text-white fw-semibold px-4 rounded-pill">
-//             View Course
-//           </button>
-//         </div>
-//       </div>
-
-//       <div className="card-overlay"></div>
-//     </div>
-//   );
-// };
-
 const CoursePage2 = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [viewMode, setViewMode] = useState("grid");
+  const [courses, setCourses] = useState([]);
 
-  const courses = [
-    {
-      id: 1,
-      title: "Digital Marketing Fundamentals",
-      description:
-        "Master the essentials of digital marketing, including SEO, social media, and content strategy with hands-on projects.",
-      category: "Digital Marketing",
-      level: "Beginner",
-      duration: "6 weeks",
-      students: "1.2k",
-      rating: "4.8",
-      price: "99",
-      bgClass: "bg-gradient-pink",
-      icon: "📱",
-    },
-    {
-      id: 2,
-      title: "Introduction to Graphic Design",
-      description:
-        "Learn visual communication and design tools like Adobe Photoshop and Illustrator from industry professionals.",
-      category: "Graphic Design",
-      level: "Beginner",
-      duration: "8 weeks",
-      students: "890",
-      rating: "4.7",
-      price: "129",
-      bgClass: "bg-gradient-purple",
-      icon: "🎨",
-    },
-    {
-      id: 3,
-      title: "Cloud Computing Basics (AWS)",
-      description:
-        "An introductory course to cloud computing concepts and Amazon Web Services (AWS) fundamentals.",
-      category: "Cloud Computing",
-      level: "Intermediate",
-      duration: "10 weeks",
-      students: "756",
-      rating: "4.9",
-      price: "199",
-      bgClass: "bg-gradient-green",
-      icon: "☁️",
-    },
-    {
-      id: 4,
-      title: "Mobile App Development (Android)",
-      description:
-        "Build your first Android applications using Java/Kotlin and the Android Studio IDE.",
-      category: "Mobile Development",
-      level: "Intermediate",
-      duration: "12 weeks",
-      students: "632",
-      rating: "4.6",
-      price: "249",
-      bgClass: "bg-gradient-orange",
-      icon: "📱",
-    },
-    {
-      id: 5,
-      title: "Data Science with Python",
-      description:
-        "Explore data analysis, visualization, and machine learning using Python and popular libraries.",
-      category: "Data Science",
-      level: "Advanced",
-      duration: "16 weeks",
-      students: "1.5k",
-      rating: "4.9",
-      price: "299",
-      bgClass: "bg-gradient-blue",
-      icon: "📊",
-    },
-    {
-      id: 6,
-      title: "Full-Stack Web Development",
-      description:
-        "Complete web development bootcamp covering frontend, backend, and database technologies.",
-      category: "Web Development",
-      level: "Intermediate",
-      duration: "20 weeks",
-      students: "2.1k",
-      rating: "4.8",
-      price: "Free",
-      bgClass: "bg-gradient-teal",
-      icon: "💻",
-    },
-  ];
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await fetch(API.COURSES);
+        const data = await res.json();
+        setCourses(data);
+      } catch (err) {
+        console.error("Failed to fetch courses:", err);
+      }
+    };
+
+    fetchCourses();
+  }, []);
 
   const categories = [
     "All",
