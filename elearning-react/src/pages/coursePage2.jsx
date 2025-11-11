@@ -3,12 +3,15 @@ import CourseCard2 from "../components/courseCard2";
 import { Search, Grid, List } from "lucide-react";
 import Navbar2 from "../components/navbar2";
 import logo from "/assets/images/logo-banner.png";
+import { API } from "../api/api";
+import LoadingScreen from "../components/loading";
 
 const CoursePage2 = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [viewMode, setViewMode] = useState("grid");
   const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -18,6 +21,8 @@ const CoursePage2 = () => {
         setCourses(data);
       } catch (err) {
         console.error("Failed to fetch courses:", err);
+      } finally {
+        setLoading(false); // Set loading to false after fetch
       }
     };
 
@@ -130,41 +135,50 @@ const CoursePage2 = () => {
 
       {/* Course Grid */}
       <div className="container py-5">
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2 className="h4 fw-bold mb-0">
-            {filteredCourses.length} Course
-            {filteredCourses.length !== 1 ? "s" : ""} Available
-          </h2>
-          <small className="text-muted">
-            Showing results for "
-            {selectedCategory === "All" ? "All Categories" : selectedCategory}"
-          </small>
-        </div>
-
-        <div
-          className={`row g-4 ${
-            viewMode === "list"
-              ? "row-cols-1"
-              : "row-cols-1 row-cols-md-2 row-cols-lg-3"
-          }`}
-        >
-          {filteredCourses.map((course, index) => (
-            <div key={course.id} className="col">
-              <CourseCard2 course={course} index={index} />
+        {loading ? (
+          <LoadingScreen />
+        ) : (
+          <>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h2 className="h4 fw-bold mb-0">
+                {filteredCourses.length} Course
+                {filteredCourses.length !== 1 ? "s" : ""} Available
+              </h2>
+              <small className="text-muted">
+                Showing results for "
+                {selectedCategory === "All"
+                  ? "All Categories"
+                  : selectedCategory}
+                "
+              </small>
             </div>
-          ))}
-        </div>
 
-        {filteredCourses.length === 0 && (
-          <div className="text-center py-5">
-            <div style={{ fontSize: "4rem" }} className="mb-3">
-              🔍
+            <div
+              className={`row g-4 ${
+                viewMode === "list"
+                  ? "row-cols-1"
+                  : "row-cols-1 row-cols-md-2 row-cols-lg-3"
+              }`}
+            >
+              {filteredCourses.map((course) => (
+                <div key={course.id} className="col">
+                  <CourseCard2 course={course} key={course.id} />
+                </div>
+              ))}
             </div>
-            <h3 className="h4 fw-bold mb-2">No courses found</h3>
-            <p className="text-muted">
-              Try adjusting your search terms or filters
-            </p>
-          </div>
+
+            {filteredCourses.length === 0 && !loading && (
+              <div className="text-center py-5">
+                <div style={{ fontSize: "4rem" }} className="mb-3">
+                  🔍
+                </div>
+                <h3 className="h4 fw-bold mb-2">No courses found</h3>
+                <p className="text-muted">
+                  Try adjusting your search terms or filters
+                </p>
+              </div>
+            )}
+          </>
         )}
       </div>
 
