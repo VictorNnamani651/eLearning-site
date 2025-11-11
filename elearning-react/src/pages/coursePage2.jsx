@@ -5,6 +5,8 @@ import Navbar2 from "../components/navbar2";
 import logo from "/assets/images/logo-banner.png";
 import { API } from "../api/api";
 import LoadingScreen from "../components/loading";
+import Footer from "../components/footer";
+import NewsletterSection from "../components/newsLetter";
 
 const CoursePage2 = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -181,6 +183,9 @@ const CoursePage2 = () => {
           </>
         )}
       </div>
+
+      <Footer />
+      <NewsletterSection />
 
       <style>{`
         .course-listing-page {
