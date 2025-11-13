@@ -7,6 +7,7 @@ import { API } from "../api/api";
 import LoadingScreen from "../components/loading";
 import Footer from "../components/footer";
 import NewsletterSection from "../components/newsLetter";
+import { useNavigate } from "react-router-dom";
 
 const CoursePage2 = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -14,6 +15,7 @@ const CoursePage2 = () => {
   const [viewMode, setViewMode] = useState("grid");
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -164,7 +166,13 @@ const CoursePage2 = () => {
             >
               {filteredCourses.map((course) => (
                 <div key={course.id} className="col">
-                  <CourseCard2 course={course} key={course.id} />
+                  <CourseCard2
+                    course={course}
+                    key={course.id}
+                    event={() => {
+                      navigate("/courseDetail");
+                    }}
+                  />
                 </div>
               ))}
             </div>

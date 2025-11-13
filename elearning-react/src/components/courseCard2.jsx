@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Star, Clock, Users } from "lucide-react";
 
-const CourseCard2 = ({ course, index }) => {
+const CourseCard2 = ({ course, index, event }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -9,6 +9,7 @@ const CourseCard2 = ({ course, index }) => {
       className="course-card card h-100 border-0 shadow-lg"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick ={event}
       style={{
         animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
         transform: isHovered
